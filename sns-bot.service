@@ -1,0 +1,17 @@
+[Unit]
+Description=SNS Sales Bot — Discord webhook for .sol domain sales
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/YOUR_USER/sns-sales-bot
+ExecStart=/usr/bin/node dist/app.js
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=sns-bot
+EnvironmentFile=/home/YOUR_USER/sns-sales-bot/.env
+
+[Install]
+WantedBy=default.target

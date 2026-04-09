@@ -1,0 +1,9 @@
+node_modules/
+dist/
+data/
+.env
+*.db
+*.log
+test-svg.ts
+test-card.svg
+test-card.png
